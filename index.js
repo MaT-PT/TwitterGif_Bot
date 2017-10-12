@@ -19,7 +19,7 @@ Promise.resolve()
 
 const app = new Composer();
 
-const reVideoId = new RegExp('^(?:https?://(?:[a-z-]+\\.)?twitter\\.com/[^/]+/status/|id:)(\\d+)(?:[?#]|$)', 'i');
+const reVideoId = new RegExp('^(?:https?://(?:[a-z-]+\\.)?twitter\\.com/[^/]+/status(?:es)?/|id:)(\\d+)(?:[?#]|$)', 'i');
 const reVideoUrl = new RegExp('&quot;video_url&quot;:&quot;(.+?)&quot;');
 const reVideoDomain = new RegExp('^https?://[^/]+', 'i');
 
