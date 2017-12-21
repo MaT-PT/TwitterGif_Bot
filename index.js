@@ -259,7 +259,7 @@ app.command('/creategif', async (ctx) => {
 });
 
 app.hears((text) => !text.startsWith('/'), async (ctx) => {
-  const urls = ctx.update.message.text.split(' ').filter((arg) => reVideoId.test(arg));
+  const urls = ctx.update.message.text.split(/\s/).filter((arg) => reVideoId.test(arg));
 
   if (urls.length < 2) {
     await processUrl(urls[0], ctx);
@@ -274,7 +274,7 @@ app.hears((text) => !text.startsWith('/'), async (ctx) => {
 app.on('inline_query', async (ctx) => {
   console.log('INLINE QUERY:', ctx.inlineQuery);
 
-  const url = ctx.inlineQuery.query.split(' ').find((arg) => reVideoId.test(arg));
+  const url = ctx.inlineQuery.query.split(/\s/).find((arg) => reVideoId.test(arg));
   const videoId = getVideoId(url);
 
   const results = [];
