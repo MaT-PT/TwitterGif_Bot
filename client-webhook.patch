@@ -1,6 +1,6 @@
---- node_modules/telegraf/lib/network/client.js	2017-09-22 04:26:12.556373950 +0200
-+++ node_modules/telegraf/lib/network/client.js	2017-09-22 03:35:17.825691862 +0200
-@@ -67 +67,2 @@
--    if (this.options.webhookReply && this.response && !this.response.finished && !isMultipart && !webhookBlacklist.includes(method)) {
+--- node_modules/telegraf/core/network/client.js	2017-12-10 19:55:53.000000000 +0100
++++ node_modules/telegraf/core/network/client.js	2017-12-21 23:13:54.592558391 +0100
+@@ -75 +75,2 @@
+-    if (this.options.webhookReply && !isMultipartRequest && this.response && !this.response.finished && !WebhookBlacklist.includes(method)) {
 +    const canUseWebhook = !(extra.noWebhook && delete extra.noWebhook)
-+    if (canUseWebhook && this.options.webhookReply && this.response && !this.response.finished && !isMultipart && !webhookBlacklist.includes(method)) {
++    if (canUseWebhook && this.options.webhookReply && !isMultipartRequest && this.response && !this.response.finished && !WebhookBlacklist.includes(method)) {

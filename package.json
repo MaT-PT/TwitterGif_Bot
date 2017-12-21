@@ -11,11 +11,10 @@
   "license": "MIT",
   "dependencies": {
     "fluent-ffmpeg": "^2.1.2",
-    "micro-bot": "^1.4.2",
+    "markdown-escape": "^1.0.2",
+    "micro-bot": "^2.2.0",
     "node-fetch": "^1.7.3",
-    "sqlite": "^2.8.0",
-    "sqlite3": "^3.1.13",
-    "telegraf-command-parts": "^1.0.3",
-    "markdown-escape": "^1.0.2"
+    "sqlite": "^2.9.0",
+    "telegraf-command-parts": "^1.0.3"
   }
 }
