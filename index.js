@@ -152,7 +152,7 @@ async function processStatusId(videoId, ctx, extra = {}, isInline = false) {
   await ctx.replyWithChatAction('upload_video');
 
   const {file_id, is_document} = await checkCache(videoId);
-  const replyExtra = Object.assign(isInline ? {
+  const replyExtra = Object.assign({
     reply_markup: {
       inline_keyboard: [
         [
@@ -163,7 +163,7 @@ async function processStatusId(videoId, ctx, extra = {}, isInline = false) {
         ]
       ]
     }
-  } : {}, extra);
+  }, extra);
 
   if (file_id) {
     console.log('Cache hit!');
