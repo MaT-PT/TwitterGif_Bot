@@ -96,7 +96,7 @@ async function fetchVideo(videoId) {
   const videoUrl = videoUrlDirty.replace(/\\/g, '');
 
   console.log(videoUrl);
-  if (videoUrl.endsWith('.m3u8')) {
+  if (videoUrl.includes('.m3u8')) {
     const [videoDomain] = reVideoDomain.exec(videoUrl);
     const m3u8List = await getM3u8UrlList(videoUrl, videoDomain);
     const m3u8Url = m3u8List[m3u8List.length - 1];

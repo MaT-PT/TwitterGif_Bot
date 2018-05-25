@@ -1,5 +1,5 @@
 {
-  "name": "TwitterGif_Bot",
+  "name": "twittergif_bot",
   "version": "1.0.0",
   "private": true,
   "description": "Get Twitter GIFs/videos as GIFs in Telegram",
